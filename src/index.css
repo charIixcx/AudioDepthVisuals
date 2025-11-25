@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  user-select: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffcc;
+}
+
+@layer components {
+  .btn {
+    @apply block w-full p-2.5 bg-[#1a1a1a] border border-[#333] text-[#00ffcc] text-center cursor-pointer text-[11px] uppercase tracking-widest rounded transition-all duration-200 mb-1.5 hover:bg-[#00ffcc] hover:text-black hover:border-[#00ffcc] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-active {
+    @apply bg-[#ff0055] border-[#ff0055] text-white;
+  }
+  .btn-ai {
+    @apply border-[#6a00ff] text-[#d08aff] bg-[rgba(106,0,255,0.1)] hover:bg-[#6a00ff] hover:text-white hover:border-[#6a00ff];
+  }
+  .input-text {
+    @apply w-full bg-[#111] border border-[#333] text-white p-2 mb-1.5 rounded text-xs focus:outline-none focus:border-[#00ffcc] focus:bg-black;
+  }
+  .select-input {
+    @apply w-full bg-[#111] border border-[#333] text-white p-2 mb-1.5 rounded text-xs;
+  }
+}
